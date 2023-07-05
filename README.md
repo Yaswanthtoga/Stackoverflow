@@ -1,14 +1,10 @@
-# Expo Router Example
+## Demo of my Project
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+https://github.com/Yaswanthtoga/Stackoverflow/assets/108019950/77919345-43c7-4452-ba2f-0c266f83ebeb
 
-## 🚀 How to use
-
-```sh
-npx create-expo-app -e with-router
-```
-
-## 📝 Notes
-
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
+## Tech Stack I have Used
+1) React Native
+2) Stepzen
+3) GraphQL
+4) URQL
+5) Stackoverflow Exchange API
