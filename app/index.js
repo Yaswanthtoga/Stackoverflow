@@ -1,12 +1,20 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, FlatList, StyleSheet, Text, View } from "react-native";
 import QuestionListItem from "../src/components/QuestionListItem";
-import questions from '../data/questions.json';
+import { useQuery } from "urql";
+import { questionsQuery } from '../src/graphql/query';
 
 export default function Page() {
+  const [response] = useQuery({ query:questionsQuery,variables:{sort : 'votes'} });
+
+  if(response.fetching){
+    return (
+      <ActivityIndicator/>
+    )
+  }
   return (
     <View style={styles.container}>
       <FlatList
-        data={questions.items}
+        data={response.data.questions.items}
         renderItem={({item})=><QuestionListItem question={item} />}
         showsVerticalScrollIndicator={false}
       />
