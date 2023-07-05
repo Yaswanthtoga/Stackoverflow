@@ -48,3 +48,22 @@ export const getQuestionQuery = gql`
     }
   }
 `;
+
+export const searchQuery = gql`
+  query SearchQuery($term: String!){
+    search(term: $term){
+      items {
+        answer_count
+        body_markdown
+        creation_date
+        is_answered
+        link
+        question_id
+        score
+        tags
+        title
+        view_count
+      }
+    }
+  }
+`
